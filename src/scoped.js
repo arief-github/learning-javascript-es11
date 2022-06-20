@@ -5,7 +5,7 @@
 // let
 let x = 2;
 x += 40;
-console.log(x);
+// console.log(x);
 
 // const: sifat dari variable const ini yaitu satu kali assign. kita tidak dapat merubah nilainya kembali
 // ataupun di deklarasi ulang
@@ -27,7 +27,7 @@ function jumpOut() {
     console.log("Outside Loop" + value); // var bisa akses nilai value disini.
 }
 
-jumpOut();
+// jumpOut();
 
 //  kita coba menggunakan let/const. saya pakai let. let dan const punya blocked scoped.
 function stayContained() {
@@ -38,4 +38,17 @@ function stayContained() {
     }
     console.log("Outside loop" + value); // ReferenceError: 'value' is not defined
 }
-stayContained();
+// stayContained();
+
+// Closures Block Problem
+function closuresInLoopsProblem() {
+    for (var counter = 1; counter <= 3; ++counter) {
+        (function(value) {
+            setTimeout(function() {
+                console.log(value);
+            }, 10)
+        })(counter)
+    }
+}
+
+closuresInLoopsProblem();

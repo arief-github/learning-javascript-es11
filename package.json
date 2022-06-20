@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "build": "babel src -d lib",
-        "start": "node ./lib/scoped.js"
+        "start": "node ./lib/scoped.js",
+        "dev" : "node ./src/scoped.js"
     },
     "keywords": [],
     "author": "",
